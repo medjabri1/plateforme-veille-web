@@ -1,0 +1,152 @@
+/* CSS Styling variables */
+:root {
+  --main-bg-dark: #031114;
+  --main-bg-light: #ececec;
+  --main-type: #eed8da;
+  --secondary-type: #f7283a;
+}
+
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rssapp-title-header {
+    display: none !important;
+}
+
+/* Navbar Styling */
+
+header {
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-bg-dark);
+}
+
+nav {
+    margin: auto;
+    width: 100%;
+    height: fit-content;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: var(--main-bg-light);
+}
+
+nav .logo {
+    color: var(--secondary-type);
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+nav .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: cen;
+    list-style: none;
+}
+
+nav .nav-list .nav-list-item {
+    padding: 10px 15px;
+    opacity: .7;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: var(--main-type);
+    transition: opacity 100ms ease-in-out;
+}
+
+nav .nav-list .nav-list-item.active {
+    opacity: .7;
+}
+
+nav .nav-list .nav-list-item:hover {
+    opacity: .9;
+}
+
+/* Artciles */
+
+.articles {
+    padding-top: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; 
+}
+
+.articles .category {
+    width: calc(100% - 60px);
+    height: max-content;
+    box-shadow: 0px 0px 3px #03111455;
+    margin: 30px;
+}
+
+.category .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 30px 20px 20px 70px;
+    text-transform: uppercase;
+}
+
+.category .container {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.article {
+    box-shadow: 0px 0px 2px #031114;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+    opacity: .7;
+    transition: all 300ms ease-in-out;
+    transition-property: opacity transform filter;
+    /* filter: blur(1px); */
+    transform: scale(1);
+}
+
+.article:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.category .article .title {
+    color: var(--secondary-type);
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.category .article .content {
+    color: var(--main-bg-dark);
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
