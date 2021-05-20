@@ -1,46 +1,39 @@
-// let articles_container_dom = document.querySelector('.articles');
+const categories_titles_dom = document.querySelectorAll('.articles .category .name');
+const nav_list_items_dom = document.querySelectorAll('.nav-list .nav-list-item');
 
-// let articles_data = [];
+const mobile_nav_btn = document.querySelector('.mobile-nav-btn');
 
-// fetch(`https://gnews.io/api/v4/top-headlines?&token=aba7f2b7eecff457ee36763c6ae7e8df&lang=en&topic=technology`)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         displayArticles(data.articles, 'technology');
-//     });
+// Categories collapse and uncollapse
+categories_titles_dom.forEach(title => {
 
-// fetch(`https://gnews.io/api/v4/top-headlines?&token=aba7f2b7eecff457ee36763c6ae7e8df&lang=en&topic=science`)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         displayArticles(data.articles, 'science');
-//     });
+    title.addEventListener('click', () => {
+        title.parentElement.classList.toggle('collapsed');
+    });
 
-// fetch(`https://gnews.io/api/v4/top-headlines?&token=aba7f2b7eecff457ee36763c6ae7e8df&lang=en&topic=business`)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         displayArticles(data.articles, 'business');
-//     });
+});
 
+// Uncollapse when clicking in nav-links
+nav_list_items_dom.forEach(link => {
 
-// function displayArticles(articles, category) {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = document.querySelector(`.articles .category.${link.dataset.className}`);
 
-//     document.querySelector(`.articles .category.${category} .container`).innerHTML = "";
+        if (target.classList.contains('collapsed')) {
+            target.classList.remove('collapsed');
+            target.addEventListener('transitionstart', () => {
+                window.location.replace(link.href);
+            })
+        } else {
+            window.location.replace(link.href);
+        }
+    });
 
-//     articles.forEach(article => {
-//         let article_dom = document.createElement('div');
-//         article_dom.classList.add('article');
-//         article_dom.innerHTML =
-//             `<div class="title">${article.title}</div>
-//             <div class="content">${article.content.slice(0, 100)}...</div>`;
+});
 
-//         document.querySelector(`.articles .category.${category} .container`).appendChild(article_dom);
-//         document.querySelector(`.articles .category.${category} .name`).textContent = category;
-//     })
-// }
+// Mobile Navigation burger button
+mobile_nav_btn.addEventListener('click', () => {
 
+    mobile_nav_btn.classList.toggle('cancel');
 
+});

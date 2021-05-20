@@ -17,6 +17,11 @@
 
     <!-- External Style -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- End External Style -->
 
     <!-- External Script -->
@@ -31,74 +36,62 @@
 
 <body>
 
-    <header>
-        <nav>
-            <a href="#" class="logo">
-                Mohammed Jabri
-            </a>
-            <ul class="nav-list">
-                <li class="nav-list-item active">
-                    <a href="#business-intelligence">Business Intelligence</a>
-                </li>
-                <li class="nav-list-item">
-                    <a href="#economy">Economy</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="global-container">
+        <header>
+            <span class="mobile-nav-btn">
+                <span></span>
+            </span>
+            <nav>
+                <a href="#heading" class="logo">
+                    Mohammed Jabri
+                </a>
+                <ul class="nav-list">
+                    <a class="nav-list-item" href="#business-intelligence" data-class-name="business-intelligence">
+                        <li>Business Intelligence</li>
+                    </a>
+                    <a class="nav-list-item" href="#stocks" data-class-name="stocks">
+                        <li>Stocks</li>
+                    </a>
+                    <a class="nav-list-item" href="#economy" data-class-name="economy">
+                        <li>Economy</li>
+                    </a>
+                    <a class="nav-list-item" href="#cyber-security" data-class-name="cyber-security">
+                        <li>Cyber Security</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="articles">
-    	<div id="business-intelligence" class="category business-intelligence">
-            <p class="name">Business Intelligence</p>
-		    <rssapp-wall id="SDNKWirvHburrv9V"></rssapp-wall>
-        </div>
-        <div id="economy" class="category economy">
-            <p class="name">World's Economy</p>
-            <rssapp-wall id="d2n3Tdp9PyhDEKjU"></rssapp-wall>
+        <div class="articles">
+            <h2 id="heading" class="heading">Latest <span>news</span> from various <span>topics</span> all in
+                <span>one</span> place
+            </h2>
+            <div id="business-intelligence" class="category business-intelligence collapsed">
+                <p class="name">Business Intelligence<i class="fas fa-angle-up icon"></i></p>
+                <div class="container">
+                    <rssapp-wall id="SDNKWirvHburrv9V"></rssapp-wall>
+                </div>
+            </div>
+            <div id="stocks" class="category stocks collapsed">
+                <p class="name">Stocks & Finance<i class="fas fa-angle-up icon"></i></p>
+                <div class="container">
+                    <rssapp-wall id="lD8jeKWdIn1Dvyuz"></rssapp-wall>
+                </div>
+            </div>
+            <div id="economy" class="category economy collapsed">
+                <p class="name">World's Economy<i class="fas fa-angle-up icon"></i></p>
+                <div class="container">
+                    <rssapp-wall id="d2n3Tdp9PyhDEKjU"></rssapp-wall>
+                </div>
+            </div>
+            <div id="cyber-security" class="category cyber-security collapsed">
+                <p class="name">Cyber Security<i class="fas fa-angle-up icon"></i></p>
+                <div class="container">
+                    <rssapp-wall id="ki8MMLD8g9hOpLrh"></rssapp-wall>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- <div class="articles">
-        <div class="category technology">
-            <p class="name">Technology</p>
-            <div class="container">
-                <div class="article">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-                <div class="article active">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-            </div>
-        </div>
-        <div class="category business">
-            <p class="name">Business</p>
-            <div class="container">
-                <div class="article">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-                <div class="article active">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-            </div>
-        </div>
-        <div class="category science">
-            <p class="name">Science</p>
-            <div class="container">
-                <div class="article">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-                <div class="article active">
-                    <p class="title">Test title</p>
-                    <p class="content">Test Content here goes yes i am sure</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 </body>
 
