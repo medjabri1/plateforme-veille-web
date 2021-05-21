@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plateforme de veille - MJR</title>
+    <title>VMohammed JABRI - Veille</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/2964/2964063.png" type="image/x-icon">
 
     <!-- Custom Fonts -->
     <!-- font-family: 'Kaushan Script', cursive; /* To use the font below*/ -->
@@ -37,55 +40,75 @@
 <body>
 
     <div class="global-container">
-        <header>
-            <span class="mobile-nav-btn">
-                <span></span>
-            </span>
+        <span class="mobile-nav-btn active">
+            <span></span>
+        </span>
+        <header class="header">
             <nav>
                 <a href="#heading" class="logo">
-                    Mohammed Jabri
+                    <i class="fab fa-watchman-monitoring icon"></i>
+                    <span>Plateforme de veille</span>
                 </a>
                 <ul class="nav-list">
                     <a class="nav-list-item" href="#business-intelligence" data-class-name="business-intelligence">
+                        <i class="fas fa-chart-bar icon"></i>
                         <li>Business Intelligence</li>
                     </a>
                     <a class="nav-list-item" href="#stocks" data-class-name="stocks">
+                        <i class="fas fa-chart-line icon"></i>
                         <li>Stocks</li>
                     </a>
                     <a class="nav-list-item" href="#economy" data-class-name="economy">
+                        <i class="fas fa-search-dollar icon"></i>
                         <li>Economy</li>
                     </a>
                     <a class="nav-list-item" href="#cyber-security" data-class-name="cyber-security">
+                        <i class="fas fa-shield-alt icon"></i>
                         <li>Cyber Security</li>
                     </a>
                 </ul>
+                <p class="copyrights">All copyrights reserved to<br><a href="https://mjr-dev.netlify.app/"
+                        target="_blank">Mohammed
+                        JABRI</a> &copy; 2021</p>
             </nav>
         </header>
 
         <div class="articles">
-            <h2 id="heading" class="heading">Latest <span>news</span> from various <span>topics</span> all in
-                <span>one</span> place
+            <h2 id="heading" class="heading">Latest <span>news</span> from various <span>topics</span><br>with
+                <span>daily</span> update all in <span>one</span> place
             </h2>
             <div id="business-intelligence" class="category business-intelligence collapsed">
-                <p class="name">Business Intelligence<i class="fas fa-angle-up icon"></i></p>
+                <div class="header">
+                    <i class="fas fa-chart-bar header-icon"></i>
+                    <p class="name">Business Intelligence<i class="fas fa-angle-up icon"></i></p>
+                </div>
                 <div class="container">
                     <rssapp-wall id="SDNKWirvHburrv9V"></rssapp-wall>
                 </div>
             </div>
             <div id="stocks" class="category stocks collapsed">
-                <p class="name">Stocks & Finance<i class="fas fa-angle-up icon"></i></p>
+                <div class="header">
+                    <i class="fas fa-chart-line header-icon"></i>
+                    <p class="name">Stocks<i class="fas fa-angle-up icon"></i></p>
+                </div>
                 <div class="container">
                     <rssapp-wall id="lD8jeKWdIn1Dvyuz"></rssapp-wall>
                 </div>
             </div>
             <div id="economy" class="category economy collapsed">
-                <p class="name">World's Economy<i class="fas fa-angle-up icon"></i></p>
+                <div class="header">
+                    <i class="fas fa-search-dollar header-icon"></i>
+                    <p class="name">World's Economy<i class="fas fa-angle-up icon"></i></p>
+                </div>
                 <div class="container">
                     <rssapp-wall id="d2n3Tdp9PyhDEKjU"></rssapp-wall>
                 </div>
             </div>
             <div id="cyber-security" class="category cyber-security collapsed">
-                <p class="name">Cyber Security<i class="fas fa-angle-up icon"></i></p>
+                <div class="header">
+                    <i class="fas fa-shield-alt header-icon"></i>
+                    <p class="name">Cyber Security<i class="fas fa-angle-up icon"></i></p>
+                </div>
                 <div class="container">
                     <rssapp-wall id="ki8MMLD8g9hOpLrh"></rssapp-wall>
                 </div>

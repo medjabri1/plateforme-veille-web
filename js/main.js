@@ -1,13 +1,14 @@
-const categories_titles_dom = document.querySelectorAll('.articles .category .name');
+const categories_headers_dom = document.querySelectorAll('.articles .category .header');
 const nav_list_items_dom = document.querySelectorAll('.nav-list .nav-list-item');
 
+const header_dom = document.querySelector('.header');
 const mobile_nav_btn = document.querySelector('.mobile-nav-btn');
 
 // Categories collapse and uncollapse
-categories_titles_dom.forEach(title => {
+categories_headers_dom.forEach(header => {
 
-    title.addEventListener('click', () => {
-        title.parentElement.classList.toggle('collapsed');
+    header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('collapsed');
     });
 
 });
@@ -16,17 +17,32 @@ categories_titles_dom.forEach(title => {
 nav_list_items_dom.forEach(link => {
 
     link.addEventListener('click', (e) => {
+
+        nav_list_items_dom.forEach(element => {
+            element.classList.remove('active');
+        });
+
+        link.classList.add('active');
+
         e.preventDefault();
         let target = document.querySelector(`.articles .category.${link.dataset.className}`);
+        let done = false;
 
         if (target.classList.contains('collapsed')) {
             target.classList.remove('collapsed');
-            target.addEventListener('transitionstart', () => {
-                window.location.replace(link.href);
-            })
-        } else {
-            window.location.replace(link.href);
         }
+
+        if (header_dom.classList.contains('active')) {
+            header_dom.classList.remove('active');
+        }
+
+        if (mobile_nav_btn.classList.contains('cancel')) {
+            mobile_nav_btn.classList.remove('cancel');
+        }
+
+        setTimeout(() => {
+            window.location.replace(link.href);
+        }, 20)
     });
 
 });
@@ -35,5 +51,6 @@ nav_list_items_dom.forEach(link => {
 mobile_nav_btn.addEventListener('click', () => {
 
     mobile_nav_btn.classList.toggle('cancel');
+    header_dom.classList.toggle('active');
 
 });
