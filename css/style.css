@@ -70,7 +70,12 @@ header {
     height: 5px;
     background-color: #0a262c;
     border-radius: 2px;
-    transition: transform 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    transition-property: transform width;
+}
+
+.mobile-nav-btn::before {
+    width: 40%;
 }
 
 .mobile-nav-btn span {
@@ -79,6 +84,7 @@ header {
 
 .mobile-nav-btn::after {
     top: 33px;
+    width: 40%;
 }
 
 .mobile-nav-btn:hover {
@@ -102,12 +108,14 @@ header {
 }
 
 .mobile-nav-btn.cancel::before {
+    width: 60%;
     top: 50%;
     left: 50%;
     transform: rotate(45deg);
 }
 
 .mobile-nav-btn.cancel::after {
+    width: 60%;
     top: 50%;
     left: 50%;
     transform: rotate(-45deg);
@@ -160,7 +168,7 @@ nav .nav-list {
     align-items: flex-start;
     justify-content: center;
     list-style: none;
-    margin-top: -100px;
+    margin-top: -60px;
 }
 
 nav .nav-list .nav-list-item {
@@ -177,8 +185,8 @@ nav .nav-list .nav-list-item {
     box-shadow: 0px 0px 1px #0a262c99; 
     display: flex;
     align-items: center;
-    margin: 5px 0px;
-    opacity: .6;
+    margin: 3px 0px;
+    opacity: .8;
 }
 
 nav .nav-list .nav-list-item a {
@@ -193,6 +201,10 @@ nav .nav-list .nav-list-item li {
 
 nav .nav-list .nav-list-item .icon {
     font-size: 1.3rem;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px;
     opacity: .4;
     background-color: #0a262c99;
@@ -203,11 +215,11 @@ nav .nav-list .nav-list-item .icon {
 
 nav .nav-list .nav-list-item:hover, nav .nav-list .nav-list-item.active {
     opacity: 1;
-    background-color: #eed8da;
+    background-color: #e7d4d6;
 }
 
 nav .nav-list .nav-list-item:hover .icon, nav .nav-list .nav-list-item.active .icon {
-    background-color: #0a262c;
+    background-color: #091d22;
 }
 
 nav .copyrights {
@@ -267,8 +279,8 @@ nav .copyrights a:hover {
     font-size: 1.3rem;
     font-weight: 600;
     padding: 20px;
-    padding-top: 70px;
-    margin-bottom: 50px;
+    padding-top: 40px;
+    margin-bottom: 30px;
     text-align: center;
     line-height: 2rem;
 }
@@ -283,7 +295,7 @@ nav .copyrights a:hover {
 .articles .category {
     width: 100%;
     height: min-content;
-    margin: 5px;
+    margin: 4px;
     border-radius: 10px;
     background-color: #f1f1f188;
     box-shadow: 0px 0px 2px #0a262c55, 0px 0px 15px #0a262c22, 0px 0px 2px #0a262c22 inset; 
@@ -293,13 +305,18 @@ nav .copyrights a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 15px 30px;
+    padding: 10px 30px;
     cursor: pointer;
 } 
 
 .articles .category .header .header-icon {
     font-size: 1.3rem;
     color: #0a262c;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #f1f1f1;
     background-color: #0a262c99;
     padding: 7px;
@@ -403,7 +420,7 @@ nav .copyrights a:hover {
         font-size: 1.1rem;
         font-weight: 600;
         padding: 20px;
-        padding-top: 150px;
+        padding-top: 70px;
         margin-bottom: 50px;
         text-align: center;
         line-height: 1.8rem;
